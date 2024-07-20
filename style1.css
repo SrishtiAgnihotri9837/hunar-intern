@@ -1,0 +1,67 @@
+div{
+    font-style: oblique;
+    font-size: medium;
+    padding-left: 50px;
+    margin-left: 50px;
+    background-color: black;
+    border-radius: 2rem;
+    padding: 0.2rem 1rem;
+    margin: 0.2rem;
+
+}
+#navbar{
+
+    background-color: aliceblue;
+    color:black !important;
+    height:70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+    width:100%;
+    position:fixed;
+}
+h1{
+    text-align: center;
+    text-transform: capitalize;
+    font-style: initial;
+    
+}
+body{
+    background-color: black;
+    color:antiquewhite;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a:hover{
+    color:blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+}

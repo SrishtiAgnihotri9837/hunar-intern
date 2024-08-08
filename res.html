@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dumble Fitness Club</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Baloo Bhai 2", cursive;
+            background: url(https://i.postimg.cc/KzPQXFm4/Boxing-girl.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .left {
+            display: flex;
+            align-items: center;
+        }
+
+        .left img {
+            width: 60px;
+            filter: invert(100%);
+        }
+
+        .left div {
+            margin-left: 10px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .mid {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        .navbar {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar li {
+            margin: 10px;
+        }
+
+        .navbar li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navbar li a:hover,
+        .navbar li a.active {
+            text-decoration: underline;
+            color: gray;
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+        }
+
+        .btn {
+            font-family: "Baloo Bhai 2", cursive;
+            color: white;
+            background-color: black;
+            padding: 5px 10px;
+            border: 2px solid rgb(241, 241, 241);
+            border-radius: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .btn:hover {
+            background: rgb(73, 73, 73);
+        }
+
+        .cont {
+            border: 2px solid white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            max-width: 500px;
+            margin: 100px auto;
+        }
+
+        .formgroup input {
+            font-family: "Baloo Bhai 2", cursive;
+            margin: 10px auto;
+            text-align: center;
+            display: block;
+            width: calc(100% - 20px);
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .cont h1 {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .cont button {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px;
+        }
+
+        @media (max-width: 600px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            .mid {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.8);
+                z-index: 10;
+                padding: 10px 0;
+            }
+
+            .mid.active {
+                display: flex;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .navbar li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const mid = document.querySelector(".mid");
+
+            menuToggle.addEventListener("click", function () {
+                mid.classList.toggle("active");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        
+        <div class="left">
+            <img src="https://i.postimg.cc/QdR1bPct/logo2.png" alt="Dumble Fitness Club" />
+            <div>Fitness Club</div>
+        </div>
+
+        
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Fitness Calculator</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        
+        <div class="right">
+            <button class="btn">Call Us Now</button>
+            <button class="btn">Email Us</button>
+        </div>
+
+        
+        <div class="menu-toggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+    <div class="cont">
+        <h1>Join the best GYM of Vasai now!</h1>
+        <form action="#noaction.php">
+            <div class="formgroup">
+                <input type="text" name="" placeholder="Enter Name" />
+            </div>
+            <div class="formgroup">
+                <input type="text" name="" placeholder="Enter Age" />
+            </div>
+            <div class="formgroup">
+                <input type="text" name="" placeholder="Enter Gender" />
+            </div>
+            <div class="formgroup">
+                <input type="text" name="" placeholder="Enter Your Locality" />
+            </div>
+            <button class="btn submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
